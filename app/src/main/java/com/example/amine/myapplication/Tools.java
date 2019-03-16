@@ -2,14 +2,14 @@ package com.example.amine.myapplication;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-//import java.time.LocalTime;
+import java.time.LocalTime;
 import java.util.Calendar;
 import java.util.Date;
 
+//import java.time.LocalTime;
+
 public final class Tools {
-//    public static LocalTime getCurrentTime() {
-//        return LocalTime.now();
-//    }
+
 
     public static void getCurrentTimeUsingDate() {
 
@@ -28,14 +28,26 @@ public final class Tools {
     public static String getCurrentTimeUsingCalendar() {
 
         Calendar cal = Calendar.getInstance();
-
         Date date = cal.getTime();
 
         DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 
         String formattedDate = dateFormat.format(date);
 
-        System.out.println("Current time of the day using Calendar - 24 hour format: " + formattedDate);
+        return formattedDate;
+
+    }
+
+    public static String getCurrentDateUsingCalendar() {
+
+        Calendar cal = Calendar.getInstance();
+        Date date = cal.getTime();
+
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+
+
+        String formattedDate = dateFormat.format(date);
+
         return formattedDate;
 
     }

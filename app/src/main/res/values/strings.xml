@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="horsTime">"  خـارج الوقـت  "</string>
+    <string name="button">Button</string>
+    <string name="button2">Button</string>
+    <string name="home">الرئيسية</string>
+    <string name="save">حفظ</string>
+    <string name="individual">"  فــرد  "</string>
+    <string name="collective">"  جمــاعة  "</string>
+    <string name="Fajr">الفجر</string>
+    <string name="Dhuhr">الظهر</string>
+    <string name="Asr">العصر</string>
+    <string name="Maghrib">المغرب</string>
+    <string name="Isha">العشاء</string>
 </resources>
