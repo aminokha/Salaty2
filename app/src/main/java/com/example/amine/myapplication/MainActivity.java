@@ -31,42 +31,42 @@ public class MainActivity extends Activity {
         Isha = new Salat(SalatName.FAJR, EtatSalat.COLLECTIVE);
 //=============================================================
         dataBaseManager = new DataBaseManager(this);
-        setContentView(R.layout.result_layout);
-//        actualDate = findViewById(R.id.actualDate);
-//        actualDate.setText(Tools.getCurrentDateUsingCalendar());
-//        initCheckBox();
-//        btnSave = findViewById(R.id.button3);
-        totalPouctg = (TextView) findViewById(R.id.totalPouctg);
-        fajrPourctg = (TextView) findViewById(R.id.fajrPourctg);
-        dhuhrpourctg = (TextView) findViewById(R.id.dhuhrpourctg);
+        setContentView(R.layout.activity_main);
+        actualDate = (TextView) findViewById(R.id.actualDate);
+        actualDate.setText(Tools.getCurrentDateUsingCalendar());
+        initCheckBox();
+        btnSave = (Button) findViewById(R.id.button3);
+//        totalPouctg = (TextView) findViewById(R.id.totalPouctg);
+//        fajrPourctg = (TextView) findViewById(R.id.fajrPourctg);
+//        dhuhrpourctg = (TextView) findViewById(R.id.dhuhrpourctg);
 
-//        btnSave.setOnClickListener((View view) -> {
-//            saveOrUpdate(new Day(Tools.getCurrentDateUsingCalendar(), Fajr, Dhuhr, Asr, Maghrib, Isha));
-//        });
+        btnSave.setOnClickListener((View view) -> {
+            saveOrUpdate(new Day(Tools.getCurrentDateUsingCalendar(), Fajr, Dhuhr, Asr, Maghrib, Isha));
+        });
 
     }
 
 
     private void initCheckBox() {
-        CheckBox ChBxFajrColl = findViewById(R.id.RBFajr1);
-        CheckBox ChBxFajrIdv = findViewById(R.id.RBFajr2);
-        CheckBox ChBxFajrHors = findViewById(R.id.RBFajr3);
+        CheckBox ChBxFajrColl = (CheckBox) findViewById(R.id.RBFajr1);
+        CheckBox ChBxFajrIdv = (CheckBox) findViewById(R.id.RBFajr2);
+        CheckBox ChBxFajrHors = (CheckBox) findViewById(R.id.RBFajr3);
         //////////////////////////////
-        CheckBox ChBxDhuhrColl = findViewById(R.id.RBDhuhr1);
-        CheckBox ChBxDhuhrIdv = findViewById(R.id.RBDhuhr2);
-        CheckBox ChBxDhuhrHors = findViewById(R.id.RBDhuhr3);
+        CheckBox ChBxDhuhrColl = (CheckBox) findViewById(R.id.RBDhuhr1);
+        CheckBox ChBxDhuhrIdv = (CheckBox) findViewById(R.id.RBDhuhr2);
+        CheckBox ChBxDhuhrHors = (CheckBox) findViewById(R.id.RBDhuhr3);
         //////////////////////////////
-        CheckBox ChBxAsrColl = findViewById(R.id.RBAsr1);
-        CheckBox ChBxAsrIdv = findViewById(R.id.RBAsr2);
-        CheckBox ChBxAsrHors = findViewById(R.id.RBAsr3);
+        CheckBox ChBxAsrColl = (CheckBox) findViewById(R.id.RBAsr1);
+        CheckBox ChBxAsrIdv = (CheckBox) findViewById(R.id.RBAsr2);
+        CheckBox ChBxAsrHors = (CheckBox) findViewById(R.id.RBAsr3);
         ///////////////////////////////
-        CheckBox ChBxMaghribColl = findViewById(R.id.RBMaghrib1);
-        CheckBox ChBxMaghribIdv = findViewById(R.id.RBMaghrib2);
-        CheckBox ChBxMaghribHors = findViewById(R.id.RBMaghrib3);
+        CheckBox ChBxMaghribColl = (CheckBox) findViewById(R.id.RBMaghrib1);
+        CheckBox ChBxMaghribIdv = (CheckBox) findViewById(R.id.RBMaghrib2);
+        CheckBox ChBxMaghribHors = (CheckBox) findViewById(R.id.RBMaghrib3);
         ////////////////////////////
-        CheckBox ChBxIshaColl = findViewById(R.id.RBIsha1);
-        CheckBox ChBxIshaIdv = findViewById(R.id.RBIsha2);
-        CheckBox ChBxIshaHors = findViewById(R.id.RBIsha3);
+        CheckBox ChBxIshaColl = (CheckBox) findViewById(R.id.RBIsha1);
+        CheckBox ChBxIshaIdv = (CheckBox) findViewById(R.id.RBIsha2);
+        CheckBox ChBxIshaHors = (CheckBox) findViewById(R.id.RBIsha3);
 //=============================================
         ChBxFajrColl.setOnClickListener(view -> {
             ChBxFajrColl.setChecked(true);
