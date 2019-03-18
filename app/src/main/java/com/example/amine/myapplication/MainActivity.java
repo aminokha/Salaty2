@@ -12,13 +12,13 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 public class MainActivity extends Activity {
     private static SQLiteDatabase database;
     public Salat Fajr, Dhuhr, Asr, Maghrib, Isha;
     TextView actualDate;
     private Button btnSave;
     private DataBaseManager dataBaseManager;
+    TextView totalPouctg, fajrPourctg, dhuhrpourctg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,15 +31,18 @@ public class MainActivity extends Activity {
         Isha = new Salat(SalatName.FAJR, EtatSalat.COLLECTIVE);
 //=============================================================
         dataBaseManager = new DataBaseManager(this);
-        setContentView(R.layout.activity_main);
-        actualDate = findViewById(R.id.actualDate);
-        actualDate.setText(Tools.getCurrentDateUsingCalendar());
-        initCheckBox();
-        btnSave = findViewById(R.id.button3);
+        setContentView(R.layout.result_layout);
+//        actualDate = findViewById(R.id.actualDate);
+//        actualDate.setText(Tools.getCurrentDateUsingCalendar());
+//        initCheckBox();
+//        btnSave = findViewById(R.id.button3);
+        totalPouctg = (TextView) findViewById(R.id.totalPouctg);
+        fajrPourctg = (TextView) findViewById(R.id.fajrPourctg);
+        dhuhrpourctg = (TextView) findViewById(R.id.dhuhrpourctg);
 
-        btnSave.setOnClickListener((View view) -> {
-            saveOrUpdate(new Day(Tools.getCurrentDateUsingCalendar(), Fajr, Dhuhr, Asr, Maghrib, Isha));
-        });
+//        btnSave.setOnClickListener((View view) -> {
+//            saveOrUpdate(new Day(Tools.getCurrentDateUsingCalendar(), Fajr, Dhuhr, Asr, Maghrib, Isha));
+//        });
 
     }
 
@@ -196,6 +199,7 @@ public class MainActivity extends Activity {
     }
 
     public void toAccueil(View view) {
-        setContentView(R.layout.activity_main);
+//        setContentView(R.layout.activity_main);
+        fajrPourctg.setText("test");
     }
 }
