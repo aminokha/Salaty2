@@ -199,7 +199,7 @@ public class MainActivity extends Activity {
     }
 
     public void toAccueil(View view) {
-//        setContentView(R.layout.activity_main);
-        fajrPourctg.setText("test");
+        setContentView(R.layout.activity_main);
+
     }
 }
