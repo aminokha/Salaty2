@@ -2,27 +2,83 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="#0d8c44"
+              android:background="@drawable/background1"
               android:orientation="vertical"
     >
+    <TableLayout
 
-
-
-    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                 android:layout_width="match_parent"
-                 android:layout_height="wrap_content"
-                 android:layout_marginTop="20dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         >
-
-        <TableRow
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="25dp"
-            android:background="@drawable/buttonstyle"
-            android:gravity="center_vertical"
-            android:paddingStart="25dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="right|center"
+            android:orientation="horizontal"
             >
+            <TextView
+                android:id="@+id/dateStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/border2"
+                android:padding="5dp"
+                android:text="2019/03/19"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="25dp"
+                />
+             <TextView
+                 android:layout_width="50dp"
+                 android:layout_height="wrap_content"
+                 android:text="من:"
+                 android:textColor="@color/colorAccent"
+                 android:textSize="25dp"
+                 android:textStyle="bold"
+                 />
 
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="right|center"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/dateEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border2"
+                android:padding="5dp"
+                android:text="2019/03/19"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="25dp"
+                />
+             <TextView
+                 android:layout_width="50dp"
+                 android:layout_height="wrap_content"
+                 android:text="إلى:"
+                 android:textColor="@color/colorAccent"
+                 android:textSize="25dp"
+                 android:textStyle="bold"
+                 >
+
+             </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/buttonstyle"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            >
             <TextView
                 android:id="@+id/totalPouctg"
                 android:layout_width="wrap_content"
@@ -41,103 +97,225 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 />
-        </TableRow>
+        </LinearLayout>
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="20dp"
+                     android:gravity="center"
+            >
 
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/border2"
-            android:gravity="right"
-            android:padding="8dp"
+            android:paddingBottom="5dp"
+            android:paddingStart="0dp"
+            android:paddingTop="5dp"
+            >
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="3dp"
+                android:text="النسبة"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/horsTime"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/individual"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/collective"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="15sp"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/border2"
+            android:gravity="center"
+            android:padding="5dp"
             >
 
             <TextView
                 android:id="@+id/fajrPourctg"
-                android:layout_width="wrap_content"
+                android:layout_width="55dp"
                 android:layout_height="wrap_content"
-                android:text="% 50"
+                android:text="% 100"
                 android:textAlignment="center"
                 android:textColor="@color/secondaryTextColor"
-                android:textSize="20sp"
-                android:textStyle="bold"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:id="@+id/fajrOut"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:textAlignment="center"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/fajrIdv"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:textAlignment="center"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/fajrColl"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:textAlignment="center"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="15sp"
                 />
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="30dp"
                 android:text="@string/Fajr"
-                android:textColor="@color/secondaryTextColor"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/border2"
-            android:gravity="right"
-            android:padding="8dp"
-            >
-            <TextView
-                android:id="@+id/dhuhrpourctg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="% 50"
                 android:textAlignment="center"
                 android:textColor="@color/secondaryTextColor"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 />
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="2dp"
+            android:background="@drawable/border2"
+            android:gravity="center"
+            android:padding="5dp"
+            >
+            <TextView
+                android:id="@+id/dhuhrPourctg"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:text="% 100"
+                android:textAlignment="center"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="15sp"
+                />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/dhuhrOut"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:textAlignment="center"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/dhuhrIdv"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:textAlignment="center"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/dhuhrColl"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:textAlignment="center"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="15sp"
+                />
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="30dp"
                 android:text="@string/Dhuhr"
-                android:textColor="@color/secondaryTextColor"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/border2"
-            android:gravity="right"
-            android:padding="8dp"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="% 50"
                 android:textAlignment="center"
                 android:textColor="@color/secondaryTextColor"
                 android:textSize="20sp"
                 android:textStyle="bold"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="2dp"
+            android:background="@drawable/border2"
+            android:gravity="center"
+            android:padding="5dp"
+            >
+            <TextView
+                android:id="@+id/asrPourctg"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:text="% 100"
+                android:textAlignment="center"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:id="@+id/asrOut"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:textAlignment="center"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/asrIdv"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:textAlignment="center"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/asrColl"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:textAlignment="center"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="15sp"
                 />
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="30dp"
                 android:text="@string/Asr"
+                android:textAlignment="center"
                 android:textColor="@color/secondaryTextColor"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -145,31 +323,54 @@
         </TableRow>
 
         <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="2dp"
             android:background="@drawable/border2"
-            android:gravity="right"
-            android:padding="8dp"
+            android:gravity="center"
+            android:padding="5dp"
             >
-
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/maghribPourctg"
+                android:layout_width="55dp"
                 android:layout_height="wrap_content"
-                android:text="% 50"
+                android:text="% 100"
                 android:textAlignment="center"
                 android:textColor="@color/secondaryTextColor"
-                android:textSize="20sp"
-                android:textStyle="bold"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:id="@+id/maghribOut"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:textAlignment="center"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/maghribIdv"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:textAlignment="center"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/maghribColl"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:textAlignment="center"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="15sp"
                 />
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="30dp"
                 android:text="@string/Maghrib"
+                android:textAlignment="center"
                 android:textColor="@color/secondaryTextColor"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -177,37 +378,62 @@
         </TableRow>
 
         <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="2dp"
             android:background="@drawable/border2"
-            android:gravity="right"
-            android:padding="8dp"
+            android:gravity="center"
+            android:padding="5dp"
             >
+            <TextView
+                android:id="@+id/ishaPourctg"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:text="% 100"
+                android:textAlignment="center"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="15sp"
+                />
 
             <TextView
+                android:id="@+id/ishaOut"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:textAlignment="center"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/ishaIdv"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:textAlignment="center"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/ishaColl"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:textAlignment="center"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="% 50"
+                android:text="@string/Isha"
                 android:textAlignment="center"
                 android:textColor="@color/secondaryTextColor"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 />
-            <TextView
-                android:layout_column="0"
-                android:id="@+id/textView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="30dp"
-                android:text="@string/Isha"
-                android:textColor="@color/secondaryTextColor"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                />
         </TableRow>
+
+
+    </TableLayout>
 
     </TableLayout>
 

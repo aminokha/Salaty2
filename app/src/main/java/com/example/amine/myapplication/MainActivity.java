@@ -2,6 +2,7 @@ package com.example.amine.myapplication;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.database.sqlite.SQLiteConstraintException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -17,8 +18,8 @@ public class MainActivity extends Activity {
     public Salat Fajr, Dhuhr, Asr, Maghrib, Isha;
     TextView actualDate;
     private Button btnSave;
-    private DataBaseManager dataBaseManager;
-    TextView totalPouctg, fajrPourctg, dhuhrpourctg;
+    static DataBaseManager dataBaseManager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,13 +33,10 @@ public class MainActivity extends Activity {
 //=============================================================
         dataBaseManager = new DataBaseManager(this);
         setContentView(R.layout.activity_main);
-        actualDate = (TextView) findViewById(R.id.actualDate);
+        actualDate = findViewById(R.id.actualDate);
         actualDate.setText(Tools.getCurrentDateUsingCalendar());
         initCheckBox();
-        btnSave = (Button) findViewById(R.id.button3);
-//        totalPouctg = (TextView) findViewById(R.id.totalPouctg);
-//        fajrPourctg = (TextView) findViewById(R.id.fajrPourctg);
-//        dhuhrpourctg = (TextView) findViewById(R.id.dhuhrpourctg);
+        btnSave = findViewById(R.id.btnSave);
 
         btnSave.setOnClickListener((View view) -> {
             saveOrUpdate(new Day(Tools.getCurrentDateUsingCalendar(), Fajr, Dhuhr, Asr, Maghrib, Isha));
@@ -48,25 +46,25 @@ public class MainActivity extends Activity {
 
 
     private void initCheckBox() {
-        CheckBox ChBxFajrColl = (CheckBox) findViewById(R.id.RBFajr1);
-        CheckBox ChBxFajrIdv = (CheckBox) findViewById(R.id.RBFajr2);
-        CheckBox ChBxFajrHors = (CheckBox) findViewById(R.id.RBFajr3);
+        CheckBox ChBxFajrColl = findViewById(R.id.RBFajr1);
+        CheckBox ChBxFajrIdv = findViewById(R.id.RBFajr2);
+        CheckBox ChBxFajrHors = findViewById(R.id.RBFajr3);
         //////////////////////////////
-        CheckBox ChBxDhuhrColl = (CheckBox) findViewById(R.id.RBDhuhr1);
-        CheckBox ChBxDhuhrIdv = (CheckBox) findViewById(R.id.RBDhuhr2);
-        CheckBox ChBxDhuhrHors = (CheckBox) findViewById(R.id.RBDhuhr3);
+        CheckBox ChBxDhuhrColl = findViewById(R.id.RBDhuhr1);
+        CheckBox ChBxDhuhrIdv = findViewById(R.id.RBDhuhr2);
+        CheckBox ChBxDhuhrHors = findViewById(R.id.RBDhuhr3);
         //////////////////////////////
-        CheckBox ChBxAsrColl = (CheckBox) findViewById(R.id.RBAsr1);
-        CheckBox ChBxAsrIdv = (CheckBox) findViewById(R.id.RBAsr2);
-        CheckBox ChBxAsrHors = (CheckBox) findViewById(R.id.RBAsr3);
+        CheckBox ChBxAsrColl = findViewById(R.id.RBAsr1);
+        CheckBox ChBxAsrIdv = findViewById(R.id.RBAsr2);
+        CheckBox ChBxAsrHors = findViewById(R.id.RBAsr3);
         ///////////////////////////////
-        CheckBox ChBxMaghribColl = (CheckBox) findViewById(R.id.RBMaghrib1);
-        CheckBox ChBxMaghribIdv = (CheckBox) findViewById(R.id.RBMaghrib2);
-        CheckBox ChBxMaghribHors = (CheckBox) findViewById(R.id.RBMaghrib3);
+        CheckBox ChBxMaghribColl = findViewById(R.id.RBMaghrib1);
+        CheckBox ChBxMaghribIdv = findViewById(R.id.RBMaghrib2);
+        CheckBox ChBxMaghribHors = findViewById(R.id.RBMaghrib3);
         ////////////////////////////
-        CheckBox ChBxIshaColl = (CheckBox) findViewById(R.id.RBIsha1);
-        CheckBox ChBxIshaIdv = (CheckBox) findViewById(R.id.RBIsha2);
-        CheckBox ChBxIshaHors = (CheckBox) findViewById(R.id.RBIsha3);
+        CheckBox ChBxIshaColl = findViewById(R.id.RBIsha1);
+        CheckBox ChBxIshaIdv = findViewById(R.id.RBIsha2);
+        CheckBox ChBxIshaHors = findViewById(R.id.RBIsha3);
 //=============================================
         ChBxFajrColl.setOnClickListener(view -> {
             ChBxFajrColl.setChecked(true);
@@ -195,11 +193,9 @@ public class MainActivity extends Activity {
 
 
     public void toResult(View view) {
-        setContentView(R.layout.result_layout);
+        Intent intent = new Intent(this, ResultActivity.class);
+        startActivity(intent);
     }
 
-    public void toAccueil(View view) {
-        setContentView(R.layout.activity_main);
 
-    }
 }
